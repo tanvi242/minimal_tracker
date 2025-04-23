@@ -12,24 +12,27 @@ class MyHeatMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HeatMap(
-        startDate: startDate,
-        endDate: DateTime.now(),
-        datasets: datasets,
-        colorMode: ColorMode.color,
-        defaultColor: Theme.of(context).colorScheme.secondary,
-        textColor: Colors.white,
-        showColorTip: false,
-        showText: true,
-        scrollable: true,
-        size: 30,
-        colorsets: {
-      1: Colors.green.shade200,
-      2: Colors.green.shade300,
-      3: Colors.green.shade400,
-      4: Colors.green.shade500,
-      5: Colors.green.shade600,
-      }
+    return Padding(
+      padding: EdgeInsets.only(right:210),
+      child: HeatMap(
+          startDate: startDate,
+          endDate: DateTime.now(),
+          colorMode: ColorMode.color,
+          datasets: datasets,
+          defaultColor: Theme.of(context).colorScheme.secondary,
+          textColor: Colors.white,
+          showColorTip: false,
+          showText: true,
+          scrollable: true,
+          size: 30,
+          colorsets: {
+        1: Colors.green.shade200,
+        2: Colors.green.shade300,
+        3: Colors.green.shade400,
+        4: Colors.green.shade500,
+        5: Colors.green.shade600,
+        }
+      ),
     );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:minimal_tracker/components/habit_tile.dart';
 import 'package:minimal_tracker/components/my_drawer.dart';
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         content: TextField(
           decoration: const InputDecoration(
             hintText: "Create a new habit",
-            hintStyle: const TextStyle(
+            hintStyle: TextStyle(
               color: Colors.black26,
             )
           ),
@@ -187,10 +187,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
-        /*elevation:0,
+        elevation:0,
         backgroundColor: Colors.transparent,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),*/),
+      ),
       drawer: const MyDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewHabit,

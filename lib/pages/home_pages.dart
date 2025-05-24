@@ -34,10 +34,10 @@ class _HomePageState extends State<HomePage> {
       context: context,
       builder: (context) => AlertDialog(
         content: TextField(
-          decoration: const InputDecoration(
+          decoration: InputDecoration(
             hintText: "Create a new habit",
             hintStyle: TextStyle(
-              color: Colors.black26,
+              color: Theme.of(context).colorScheme.primary,
             )
           ),
           textAlign: TextAlign.center,
@@ -234,9 +234,6 @@ class _HomePageState extends State<HomePage> {
             // handle case where no data is returned
             return Container();
           }
-
-
-
         },
     );
   }
